@@ -1,5 +1,15 @@
 {% extends "base.html" %} {% block content %}
-
 <h1>hello world!</h1>
-
-{% endblock %}
+<br>
+<br>
+<p>
+    <h1>{{ api.companyName }}</h1>
+</p>
+<br>
+<p>price : ${{ api.latestPrice }}<br></p>
+<p>previous Close : {{ api.previousClose }}<br></p>
+<p>market Cap : {{ api.marketCap }}<br></p>
+<p>ytd Change : {{ api.ytdChange }}<br></p>
+<p>52High : {{ api.week52High }}<br></p>
+<p>52Low : {{ api.week52Low }}<br></p>
+<p>{% for key , value in api.items %} {{ key }} : {{ value }} <br> {% endfor %}{% endblock %}</p>
