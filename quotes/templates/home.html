@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 <h1>hello world!</h1>
 <br>
-<br>
+<br> {% if ticker %} {{ ticker }} {% endif %} {% if api %} {% if api == "Error...." %} please try again {% else %}
 <p>
     <h1>{{ api.companyName }}</h1>
 </p>
@@ -12,4 +12,4 @@
 <p>ytd Change : {{ api.ytdChange }}<br></p>
 <p>52High : {{ api.week52High }}<br></p>
 <p>52Low : {{ api.week52Low }}<br></p>
-{% endblock %}
+{% endif %} {% endif %} {% endblock %}
