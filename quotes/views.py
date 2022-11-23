@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
+from django.contrib import messages
+from .models import Stock
+from .forms import StockForm
 
 def home(request): 
     import requests
@@ -24,6 +27,19 @@ def about(request):
     api_request = requests.get("https://cloud.iexapis.com/stable/stock/aapl/quote?token=pk_5962d03a35b9408cb94adba159d26f73")
     api = json.loads(api_request.content)
     return render(request , 'about.html' , {'api' : api})
+
+def add_stock(request):
+    if request.method == 'POST':
+        form = StockForm(request.POST or None)
+        
+        if form.is_valid():
+            form.save()
+            messages.success(request, ("Add Success"))
+            return redirect('add_stock')
+            
+    else:        
+         ticker = Stock.objects.all()
+         return render(request , 'add_stock.html' , {'ticker' : ticker})
 
 def base(request):
     return render(request , 'base.html' , {})
