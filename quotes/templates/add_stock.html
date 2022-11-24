@@ -8,4 +8,4 @@
     <button class="btn btn-outline-secondary" style="font-size: 15px; padding: 5px;" type="submit">Add Stock</button>
 </form>
 
-{% for x in ticker %} {{x.id}} : {{x.ticker}} <br> {%endfor%} {% endblock %}
+{% for x in ticker %} {{x.id}} : {{x.ticker}} | <a href="{% url 'delete' x.id %}">Delete</a><br> {%endfor%} {% endblock %}

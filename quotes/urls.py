@@ -13,4 +13,5 @@ urlpatterns = [
     path('about.html',views.about, name='about'),
     path('base.html',views.base, name='base'),
     path('add_stock.html',views.add_stock , name='add_stock'),
+    path('delete/<stock_id>',views.delete , name='delete'),
 ]
