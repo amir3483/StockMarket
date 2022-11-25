@@ -1,3 +1,7 @@
-We'll build a cool Stock Market Portfolio app that let's you save stock ticker symbols to the database, then connects to a third party API to collect stock market information about your stocks
+We will build a stock market application
+You can store stock ticker symbols in the database
+And connect to a third-party API to collect stock market data about your stock
 
-یک اپلیکیشن جالب بازار سهام خواهیم ساخت که به شما اجازه می دهد تا نمادهای تیکر سهام را در پایگاه داده ذخیره کنید، سپس به یک API شخص ثالث برای جمع آوری اطلاعات بازار سهام در مورد سهامتان متصل شوید
+یک اپلیکیشن بازار سهام خواهیم ساخت
+میتوانید نمادهای تیکر سهام را در پایگاه داده ذخیره کنید
+و به یک API شخص ثالث برای جمع آوری اطلاعات بازار سهام در مورد سهامتان متصل شوید
